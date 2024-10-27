@@ -6,7 +6,7 @@ patterns = ['!roll', '!Roll', '!ROLL']
 class monobattleRoller(handler.Handler):
     
     def can_handle(self, message):
-        if message.content in patterns:
+        if message.content.lower() in patterns:
             return True
 
     async def handle(self, message, client, collection, cache):
