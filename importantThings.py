@@ -12,7 +12,9 @@ class lobsters(handler.Handler):
     async def handle(self, message, client, collection, cache):
         roll = random.uniform(0,1)
         msg = "Shh they're sleeping"
-        if roll <= .1 or client.user.id == "314200471088922636":
+        if client.user.id == "995535732695379988":
+            msg = "Go home Badger!"
+        elif roll <= .1 or client.user.id == "314200471088922636":
             msg = "https://i.imgur.com/BMcur.gif"
         elif client.user.id == "995535732695379988":
             msg = "Go home Badger!"
