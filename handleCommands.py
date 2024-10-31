@@ -18,6 +18,7 @@ handlers.append(roller)
 handlers.append(bastardFinder)
 
 async def handleCommands(client, message, collection, cache):
+    message.content = message.content.lower() # hopefully this works now? wish I knew the type.
     for x in handlers:
         if x.can_handle(message):
             await x.handle(message, client, collection, cache)
